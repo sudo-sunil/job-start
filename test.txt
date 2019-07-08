@@ -1,0 +1,17 @@
+<?php
+
+require "connect.php";
+
+
+$sql=mysql_query("SELECT * from signup where id='ram'");
+
+while($row=mysql_fetch_assoc($sql))
+{
+
+$imagedata=$row['dp'];
+}
+header("content-type: image/jpeg");
+echo $imagedata;
+
+?>
+
